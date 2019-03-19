@@ -1,9 +1,13 @@
-class StudentBook {
+class Students {
     constructor() {
         this._studentList = [
+            { "name": "Hakki", "classId": '08', "email": "adahbour54@gmail.com", "phone": "(263) 972-6043" },
+            { "name": "Keerthika devi Alampalli", "classId": '08', "email": "keerthi1822@gmail.com", "phone": "(745) 285-6338" },
+            { "name": "Rieko", "classId": '08', "email": "adahbour54@gmail.com", "phone": "(971) 436-6442" },
+            { "name": "Sheila Qasemi", "classId": '08', "email": "sheilaqasemi2018@gmail.com", "phone": "(457) 527-9154" },
         ];
     }
-    
+     
     /**
      * Getlist should provide all students from database
      * 
@@ -19,6 +23,7 @@ class StudentBook {
 
     }
     getStudentDetailByName(name) {
+
         return this._studentList.filter((student => {
             return student.name.toLowerCase() == name.toLowerCase()
         }));
@@ -31,10 +36,15 @@ class StudentBook {
             new_student.hasOwnProperty("classId") &&
             new_student.hasOwnProperty("phone")
         ) {
+
+            if(new_student.name.length <= 2){
+                throw new Error("Name too short");
+            }
+            
             const result = this.getStudentDetailByName(new_student.name);
 
             if (result.length == 0) {
-
+                return;
             } else {
                 throw new Error("Student already exits");
             }
@@ -60,11 +70,6 @@ class StudentBook {
         }
     }
 
-    editStudentInfo(editStudentInfo = {}) {
-
-    }
 }
 
-
-
-module.exports = StudentBook;
+module.exports = Students;
