@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Abed",
+        "courses": ["NodeJS", "HTML-CSS", "JS"]
+    },
+    {
+        "name": "Benjamin",
+        "courses": ["HTML/CSS", "JS"]
+    },
+    {
+        "name": "Marco",
+        "courses": ["NodeJS"]
+    },
+    {
+        "name": "Radoslaw",
+        "courses": ["NodeJS", "JS"]
+    },
+    {
+        "name": "Marta",
+        "courses": ["Git"]
+    },
+    {
+        "name": "Deniel",
+        "courses": ["Database", "Git"]
+    }
+]
